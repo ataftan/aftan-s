@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>aftan s.</title>
+  <link rel="icon" type="image/x-icon" href="assets/main-blue.png">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="secondarystyles.css" />
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script src="jquery.ui.touch-punch.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="circularcursor">*ೃ</div>
+
+  <div class="wrapper">
+    <div class="about" id="about">
+      <div class="about-inner">
+        <div class="about-column-1">
+          <div style="background: red">
+            <span class="close"></span>
+          </div>
+          <div id="black-bg">
+
+
+            <h3 class="about-head about-scale"><span class="highight-about highight-about-head">ABOUT</span></h3>
+            <br>
+            <p class="about-para">
+              <span id="my-paragraph"> I am a multidisciplinary artist from New Delhi. My practice utilises poetics and
+                technological interventions to create sensory experiences of alternate (playful) possibilities. To
+                collaborate message me at <a class="highight-about"
+                  href="mailto:ataftan@gmail.com">ataftan@gmail.com</a> or <a class="highight-about"
+                  href="https://www.instagram.com/aft3n/"> instagram</a></span>
+
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container">
+      <main class="main">
+        <div id="title">
+          <p id="main-title"> <a href="index.html">aftan</a></p>
+        </div>
+        <div id="about-button">
+          <div id="circle"><button id="openAbout">⌘</button></div>
+        </div>
+
+        <div id="nav-1" class="nav-group">
+          <ul id="main">
+            <li class="tab toggle-dropdown">
+              ARCHIVAL PROJECTS <span class="arrow">𖦹</span></li>
+
+            <ul class="dropdown">
+
+
+              <li class="subtab">
+                <a href="anant.html"> <span class="highlighted-nav">Anant Arts Gallery, New Delhi</span></a>
+              </li>
+              <li class="subtab">
+                <a href="essays.html"><span class="highlighted-nav"> Selected Essays</span></a>
+              </li>
+            </ul>
+          </ul>
+        </div>
+        <div id="nav-2" class="nav-group">
+          <ul>
+            <li class="tab toggle-dropdown">WORKS <span class="arrow">𖦹</span></li>
+            <ul class="dropdown">
+
+              <li class="subtab">
+                <a href="kitaab.html"><span class="highlighted-nav"> Kitaab Kollective</span> </a>
+              </li>
+              <li class="subtab">
+                <a href="https://a-place-to-keep-history-safe.glitch.me/">
+                  <span class="highlighted-nav"> womb temples</span>
+                </a>
+              </li>
+              <li class="subtab">
+                <a href="ziddi.html"> <span class="highlighted-nav">Ziddi Zubaan</span></a>
+              </li>
+              <li class="subtab">
+                <a href="https://downandout.glitch.me/"> <span class="highlighted-nav">Women at the MET</span></a>
+              </li>
+
+              <li class="subtab">
+                <a href="https://godprovoking.glitch.me/"> <span class="highlighted-nav">god provoking</span></a>
+              </li>
+              <li class="subtab">
+                <a href="https://ghost-prints.glitch.me/"> <span class="highlighted-nav">ghost prints</span></a>
+              </li>
+              <li class="subtab">
+                <a href="https://excavation-array.glitch.me/">
+                  <span class="highlighted-nav">excavation prints</span></a>
+              </li>
+            </ul>
+          </ul>
+        </div>
+
+
+
+
+        <div id="gallery">
+          <div class="museum-gallery">
+            <p class="musuem-gallery-title">
+              Kitaab Kollective [ongoing]
+
+
+            </p><br>
+            <p style="margin-top:-0.6em;">
+              click <a
+                href="https://docs.google.com/document/d/1mbNJJtvlE6pXc7W55oViqd0FomMXdHI2MZ2ZPfitAso/edit?tab=t.0">
+                here</a> to view manifesto
+
+            </p>
+            <div>
+              <img id="kitaab-img" src="assets/kitaab kollective manifesto.png">
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+    <script>
+      $(".move").click(function () {
+        $(".image").toggleClass("spin");
+      });
+      $(function () {
+        $(".draggable").draggable();
+      });
+    </script>
+    <script>$('#widget').draggable();</script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

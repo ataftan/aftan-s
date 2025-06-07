@@ -1,0 +1,245 @@
+@font-face {
+  font-family: latitude;
+  src: url("assets/Latitude-Regular.otf");
+}
+
+body,
+html {
+  /*   width: 100%; */
+  padding: 0em;
+  overflow-x: hidden;
+
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url("assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+
+}
+
+#title {
+
+  grid-column: 1 / 2;
+  grid-row: 1;
+  margin-top: -0.5em;
+
+}
+
+
+
+
+
+#gallery {
+  grid-column: 1 / span 6;
+  grid-row: 3;
+
+
+}
+
+.essay-gallery {
+  font-family: "Director", monospace;
+
+  text-align: center;
+  height: 100%;
+
+  justify-content: center;
+  padding-top: 0em;
+  margin: 0 1em 0 1em;
+
+}
+
+.museum-gallery {
+  height: 100%;
+  font-family: "Director", monospace;
+
+  text-align: center;
+  justify-content: center;
+  padding-top: 2em;
+  margin-left: 1em;
+}
+
+.museum-gallery img {
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#kitaab-img {
+  width: 40%;
+}
+
+.museum-gallery .musuem-gallery-title {
+  transform: scaleY(3)scaleX(1.1);
+  font-size: 1em;
+  pointer-events: none;
+}
+
+.essays-heading {
+  transform: scaleY(3)scaleX(1.1);
+  font-size: 1em;
+
+}
+
+.essays-heading-nested {
+  font-size: 1.6em;
+  color: black;
+
+}
+
+.essays-article-tag h2 {
+  margin-top: 0;
+
+}
+
+.essays-article-tag {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+
+
+.essays-article-tag img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: 1em 0 2.2em 0;
+}
+
+.essays-article-tag p {
+
+  font-size: 1.2em;
+  background: rgb(255, 255, 255, 0.5);
+}
+
+.essays-article-para {
+  padding-bottom: 1em;
+  line-height: 25px;
+}
+
+.essay-list p {
+  transform: scaleY(1.4);
+
+}
+
+.essay-list-span {
+  background: rgb(255, 255, 255, 0.5);
+}
+
+.essay-list-span:hover {
+  color: blue;
+}
+
+
+
+footer {
+  margin-top: 50px;
+  border-top: 1px solid silver;
+  font-size: 0.8em;
+}
+
+
+footer li {
+  background: rgb(255, 255, 255, 0.5);
+}
+
+
+
+
+
+article {
+  counter-reset: footnotes;
+}
+
+/**
+ * Inline footnotes references
+ * 1. Increment the counter at each new reference
+ * 2. Reset link styles to make it appear like regular text
+ */
+[aria-describedby="footnote-label"] {
+  counter-increment: footnotes;
+  /* 1 */
+  text-decoration: none;
+  /* 2 */
+  color: inherit;
+  /* 2 */
+  cursor: default;
+  /* 2 */
+  outline: none;
+  /* 2 */
+}
+
+/**
+ * Actual numbered references
+ * 1. Display the current state of the counter (e.g. `[1]`)
+ * 2. Align text as superscript
+ * 3. Make the number smaller (since it's superscript)
+ * 4. Slightly offset the number from the text
+ * 5. Reset link styles on the number to show it's usable
+ */
+[aria-describedby="footnote-label"]::after {
+  content: "[" counter(footnotes) "]";
+  /* 1 */
+  vertical-align: super;
+  /* 2 */
+  font-size: 0.5em;
+  /* 3 */
+  margin-left: 2px;
+  /* 4 */
+  color: blue;
+  /* 5 */
+  text-decoration: underline;
+  /* 5 */
+  cursor: pointer;
+  /* 5 */
+}
+
+/**
+ * Resetting the default focused styles on the number
+ */
+[aria-describedby="footnote-label"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+}
+
+[aria-label="Back to content"] {
+  font-size: 0.8em;
+  color: blue;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+  .essays-article-para p {
+    font-size: 1.4em;
+  }
+
+  .museum-gallery img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+}
+
+
+@media (max-width: 400px) {
+
+  .essays-article-tag {
+    width: 90%;
+  }
+
+
+
+  .essays-heading-nested {
+    margin: 1em 0 0 1em;
+    font-size: 1em;
+  }
+
+}
